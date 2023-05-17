@@ -20,6 +20,7 @@ Compile: gcc -pthread -o philutku2 philutku2.c
 
 */
 
+/*uqwio*/
 
 #include <stdlib.h>
 #include <time.h>
