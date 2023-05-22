@@ -26,7 +26,6 @@ Compile: gcc -pthread -o philutku2 philutku2.c
 #include <time.h>
 // #include <semaphore.h>
 // #include <pthread.h>
-
 // #include <unistd.h>
 
 
