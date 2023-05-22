@@ -20,13 +20,15 @@ Compile: gcc -pthread -o philutku2 philutku2.c
 
 */
 
-/*uqwio*/
+/*YouShengDu*/
 
 #include <stdlib.h>
 #include <time.h>
 // #include <semaphore.h>
 // #include <pthread.h>
-#include <unistd.h>
+
+// #include <unistd.h>
+
 
 
 
@@ -45,7 +47,10 @@ struct Fork
 	sem_t mutex;
 };
 
-struct fork* forks;  //fork錯字(應為Fork*)
+
+struct fork* forks;		//fork => Fork
+
+
 sem_t global_mutex;
 int NotEatenCount = 0;
 
@@ -55,7 +60,7 @@ void is_finished()
 	int counter = 0;
 	sem_wait(&global_mutex);
 	counter = NotEatenCount();
-	sem_post(&global_mutex);	
+	sem_post(&global_mutex);
         /* return true, if NotEatenCount = 0 */
 	
 
